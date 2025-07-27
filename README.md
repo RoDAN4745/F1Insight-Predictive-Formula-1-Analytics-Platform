@@ -2,7 +2,7 @@
 This project combines machine learning and a Vite-powered website to analyze and visualize Formula 1 race data.
 ## Website
 ### Homepage
-![Image](https://i.postimg.cc/zGH1JqvJ/constructor.png)
+![Image](https://i.postimg.cc/brYh8bDM/home.png)
 
 ### Teams Page
 ![Image](https://i.postimg.cc/ncPJbXHR/teams.png)
