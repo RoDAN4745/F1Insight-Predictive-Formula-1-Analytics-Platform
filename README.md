@@ -1,5 +1,5 @@
 # F1Insight: Predictive Formula 1 Analytics Platform
-This project combines machine learning and a Vite-powered website to analyze and visualize Formula 1 race data.
+This project combines machine learning and a web development website to analyze and visualize Formula 1 race data.
 ## Website
 ### Homepage
 ![Image](https://i.postimg.cc/brYh8bDM/home.png)
