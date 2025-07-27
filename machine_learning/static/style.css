@@ -1,0 +1,178 @@
+/* General */
+body {
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  padding-top: 100px;
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 999;
+}
+
+.logo {
+  font-size: 1.8rem;
+  color: #e10600;
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.nav-links a:hover {
+  color: #e10600;
+}
+
+/* Main Heading */
+.main-heading {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.main-heading .highlight {
+  color: #e10600;
+}
+
+.main-heading::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  background-color: #e10600;
+  margin: 16px auto 0;
+  border-radius: 2px;
+}
+
+/* Form Background */
+.form-bg {
+  position: relative;
+  padding: 40px;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Blurred circuit image behind the form */
+.form-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('/static/images/image.png') center center no-repeat;
+  background-size: 53%;         /*  Shrinks the image to 80% of the box */
+  filter: blur(12px);
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+}
+
+
+/* Keep form content above blurred background */
+.form-bg form {
+  position: relative;
+  z-index: 1;
+}
+
+/* Input fields */
+label {
+  color: #cccccc;
+  font-weight: 500;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.custom-input {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border: 1px solid #e10600;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: monospace;
+  transition: box-shadow 0.3s ease;
+}
+
+.custom-input:focus {
+  border-color: #e10600;
+  box-shadow: 0 0 10px #e10600;
+}
+
+/* Button */
+.btn-submit {
+  background-color: #e10600;
+  color: white;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 8px;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #ff1a1a;
+  box-shadow: 0 0 12px #ff1a1a;
+}
+
+/* Prediction result animation */
+.result-box {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+  animation: fadeInScale 1.5s ease;
+  font-family: 'Orbitron', sans-serif;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .main-heading {
+    font-size: 2.2rem;
+  }
+}
