@@ -1,0 +1,207 @@
+@import './include-media';
+@import './variables/colors';
+@import './variables/animationDuration';
+
+.sidebar-container {
+  width: 200%;
+  z-index: 2;
+  position: fixed;
+  visibility: hidden;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include media('>tablet') {
+    display: block;
+    width: 20%;
+    visibility: visible;
+    z-index: 1;
+    margin-top: 124px;
+    position: static;
+    height: auto;
+    top: auto;
+    left: auto;
+    right: auto;
+  }
+  @include media('>laptop') {
+    width: 15%;
+  }
+  @include media('>desktop') {
+    width: 300px;
+    margin-top: 136px;
+  }
+}
+
+.sidebar {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: $sidebar-background-color;
+  width: 25%;
+  z-index: 3;
+  height: 100%;
+
+  @include media('>tablet') {
+    width: 100%;
+    visibility: visible;
+  }
+}
+
+.sidebar-slide {
+  animation: slide-sidebar $animation-duration;
+  visibility: visible;
+}
+
+@keyframes slide-sidebar {
+  0% {
+    margin-left: -25%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+.sidebar-hide {
+  animation: hide-sidebar $animation-duration;
+  visibility: visible;
+  margin-left: -50%;
+}
+
+@keyframes hide-sidebar {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: -25%;
+  }
+}
+
+.sidebar-content {
+  height: 100vh;
+
+  @include media('>tablet') {
+    height: auto;
+  }
+}
+
+.sidebar-title {
+  display: block;
+  text-align: center;
+  width: 5rem;
+  line-height: 1.4em;
+  font-size: 1.4em;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid black;
+  margin: 1rem auto;
+  color: black;
+
+  @include media('>phone') {
+    width: 5rem;
+  }
+  @include media('>tablet') {
+    width: 5.5rem;
+  }
+  @include media('>laptop') {
+    width: 6rem;
+  }
+  @include media('>desktop') {
+    width: 7rem;
+  }
+}
+
+.sidebar-list {
+  overflow-y: scroll;
+  height: calc(100% - 65px - 1.2rem);
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 3rem;
+  border-radius: 6px;
+  background-color: $sidebar-list-background-color;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @include media('>tablet') {
+    height: 1400px;
+  }
+}
+
+.sidebar-button {
+  padding: 0.2rem 0rem;
+  height: 2.2rem;
+  line-height: 2.2rem;
+  width: 70%;
+  max-width: 200px;
+  background-color: $sidebar-button-default-color;
+  display: block;
+  text-align: center;
+  margin: 0.6rem auto;
+  color: white;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  @include media('>phone') {
+    margin: 0.65rem auto;
+  }
+  @include media('>tablet') {
+    margin: 0.7rem auto;
+  }
+  @include media('>laptop') {
+    margin: 0.9rem auto;
+  }
+  @include media('>desktop') {
+    margin: 1rem auto;
+    height: 2.4rem;
+  }
+}
+
+.filler {
+  width: 75%;
+  visibility: hidden;
+  background-color: $filler-color;
+  height: 100%;
+  left: 50%;
+  z-index: 2;
+  opacity: 0.7;
+
+  @include media('>tablet') {
+    visibility: hidden;
+  }
+}
+
+.filler-slide {
+  animation: slide-filler $animation-duration;
+  visibility: visible;
+}
+
+@keyframes slide-filler {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+.filler-hide {
+  animation: hide-filler $animation-duration;
+}
+
+@keyframes hide-filler {
+  0% {
+    opacity: 0.7;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

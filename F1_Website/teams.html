@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>F1 Teams</title>
+  <link rel="stylesheet" href="teams.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">F1 Stats</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="predictions.html">Predictions</a></li>
+      <li><a href="http://localhost:5173/">Standings</a></li>
+    </ul>
+  </nav>
+
+  <section class="description-box">
+    <p>Meet all the Formula 1 teams and learn more about their legacy, championships, and racing heritage.</p>
+  </section>
+
+  <main class="teams-grid">
+    <!-- Ferrari -->
+    <div class="team-card animate" onclick="openModal('Ferrari', '🏆 16 Constructors’ Titles<br>🏁 15 Drivers’ Titles<br>Legendary team with icons like Schumacher and Lauda.')">
+      <img src="src/assets/logos/ferrari.png" alt="Ferrari Logo" />
+      <h2>Ferrari</h2>
+      <p>Team Principal: Frédéric Vasseur</p>
+      <p>Constructors: 16 | Drivers: 15</p>
+      <a href="https://www.ferrari.com/en-EN/formula1" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Mercedes -->
+    <div class="team-card animate" onclick="openModal('Mercedes', '🏆 8 Constructors’ Titles<br>🏁 9 Drivers’ Titles<br>Dominated the hybrid era with Hamilton and Rosberg.')">
+      <img src="src/assets/logos/mercedes.png" alt="Mercedes Logo" />
+      <h2>Mercedes</h2>
+      <p>Team Principal: Toto Wolff</p>
+      <p>Constructors: 8 | Drivers: 9</p>
+      <a href="https://www.mercedesamgf1.com/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Red Bull -->
+    <div class="team-card animate" onclick="openModal('Red Bull', '🏆 6 Constructors’ Titles<br>🏁 7 Drivers’ Titles<br>Home of champions Vettel and Verstappen.')">
+      <img src="src/assets/logos/redbull.png" alt="Red Bull Logo" />
+      <h2>Red Bull</h2>
+      <p>Team Principal: Christian Horner</p>
+      <p>Constructors: 6 | Drivers: 7</p>
+      <a href="https://www.redbullracing.com/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- McLaren -->
+    <div class="team-card animate" onclick="openModal('McLaren', '🏆 8 Constructors’ Titles<br>🏁 12 Drivers’ Titles<br>Senna, Prost, and Hakkinen defined this legacy.')">
+      <img src="src/assets/logos/mclaren.png" alt="McLaren Logo" />
+      <h2>McLaren</h2>
+      <p>Team Principal: Andrea Stella</p>
+      <p>Constructors: 8 | Drivers: 12</p>
+      <a href="https://www.mclaren.com/racing/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Williams -->
+    <div class="team-card animate" onclick="openModal('Williams', '🏆 9 Constructors’ Titles<br>🏁 7 Drivers’ Titles<br>Powerhouse of the 80s and 90s with Mansell and Hill.')">
+      <img src="src/assets/logos/williams.png" alt="Williams Logo" />
+      <h2>Williams</h2>
+      <p>Team Principal: James Vowles</p>
+      <p>Constructors: 9 | Drivers: 7</p>
+      <a href="https://www.williamsf1.com/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Alpine -->
+    <div class="team-card animate" onclick="openModal('Alpine', '🏁 21 Race Wins<br>🏆 0 Constructors’ Titles<br>🏁 2 Drivers’ Titles<br>Home of Fernando Alonso’s championships.')">
+      <img src="src/assets/logos/alpine.png" alt="Alpine Logo" />
+      <h2>Alpine</h2>
+      <p>Team Principal: Bruno Famin</p>
+      <p>Race Wins: 21 | Drivers: 2</p>
+      <a href="https://www.alpine-cars.co.uk/formula-1.html" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Aston Martin -->
+    <div class="team-card animate" onclick="openModal('Aston Martin', '🏁 1 Race Win<br>🚀 Rising force with Alonso. Promising pace and ambition.')">
+      <img src="src/assets/logos/astonmartin.png" alt="Aston Martin Logo" />
+      <h2>Aston Martin</h2>
+      <p>Team Principal: Mike Krack</p>
+      <p>Race Wins: 1 | Titles: 0</p>
+      <a href="https://www.astonmartinf1.com/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Sauber -->
+    <div class="team-card animate" onclick="openModal('Sauber', '🏁 1 Race Win<br>🔧 Platform for talents like Kimi and Vettel.')">
+      <img src="src/assets/logos/sauber.png" alt="Sauber Logo" />
+      <h2>Sauber</h2>
+      <p>Team Principal: Alessandro Alunni Bravi</p>
+      <p>Race Wins: 1 | Titles: 0</p>
+      <a href="https://www.sauber-group.com/motorsport/sauber-f1-team/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Haas -->
+    <div class="team-card animate" onclick="openModal('Haas', '🛠️ No wins yet<br>American team with strategic surprises and solid midfield fights.')">
+      <img src="src/assets/logos/hass.png" alt="Haas Logo" />
+    
+      <h2>Haas</h2>
+      <p>Team Principal: Ayao Komatsu</p>
+      <p>Race Wins: 0 | Titles: 0</p>
+      <a href="https://www.haasf1team.com/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+
+    <!-- Racing Bulls -->
+    <div class="team-card animate" onclick="openModal('Racing Bulls', '🎯 1 Race Win<br>Red Bull\'s junior team, developed Verstappen and Gasly.')">
+      <img src="src/assets/logos/racingbulls.png" alt="Racing Bulls Logo" />
+      <h2>Racing Bulls</h2>
+      <p>Team Principal: Laurent Mekies</p>
+      <p>Race Wins: 1 | Titles: 0</p>
+      <a href="https://scuderiatororosso.redbull.com/" target="_blank" class="team-button">Visit Website</a>
+    </div>
+  </main>
+
+  <!-- Modal -->
+  <div id="teamModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalBody"></p>
+    </div>
+  </div>
+
+  <script src="teams.js"></script>
+</body>
+</html>
+ 

@@ -1,0 +1,26 @@
+@import './variables/colors';
+
+.main.darktheme {
+  background-color: $main-dark-color;
+  filter: brightness(95%);
+}
+.season-name.darktheme {
+  color: $text-dark-color;
+}
+.sidebar.darktheme {
+  background-color: $sidebar-dark-color;
+  filter: brightness(95%);
+}
+.sidebar-list.darktheme {
+  background-color: $sidebar-list-dark-color;
+}
+.sidebar-title.darktheme {
+  color: $text-dark-color;
+  border-bottom: 1px solid $text-dark-color;
+}
+.navbar.darktheme {
+  filter: brightness(95%);
+}
+.footer.darktheme {
+  filter: brightness(95%);
+}

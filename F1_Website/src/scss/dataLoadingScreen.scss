@@ -1,0 +1,53 @@
+@import './variables/colors';
+
+.loading-screen {
+  height: calc(100vh - 15rem);
+  width: 100%;
+  background-color: $loading-screen-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media('>tablet') {
+    height: calc(100vh - 16rem);
+  }
+  @include media('>laptop') {
+    height: calc(100vh - 17.5rem);
+  }
+  @include media('>desktop') {
+    height: calc(100vh - 20rem);
+  }
+}
+
+.loading-screen-dark {
+  height: calc(100vh - 15rem);
+  width: 100%;
+  background-color: $loading-screen-dark-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-image {
+  width: 50%;
+  animation: rotate 1.2s infinite;
+
+  @include media('>phone') {
+    width: 28%;
+  }
+  @include media('>tablet') {
+    width: 25%;
+  }
+  @include media('>laptop') {
+    width: 18%;
+  }
+  @include media('>desktop') {
+    width: 15%;
+  }
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}

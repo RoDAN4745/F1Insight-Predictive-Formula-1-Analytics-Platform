@@ -1,0 +1,183 @@
+@import './include-media';
+@import './variables/colors';
+@import './variables/animationDuration';
+
+.navbar {
+  color: rgb(0, 0, 0);
+  width: 100%;
+  height: 124px;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 350px;
+}
+
+.navbar-slide {
+  animation: slide-navbar $animation-duration;
+  visibility: visible;
+  margin-left: 50%;
+}
+
+@keyframes slide-navbar {
+  0% {
+    margin-left: 0%;
+  }
+  100% {
+    margin-left: 50%;
+  }
+}
+
+.navbar-hide {
+  animation: hide-navbar $animation-duration;
+}
+
+@keyframes hide-navbar {
+  0% {
+    margin-left: 50%;
+  }
+  100% {
+    margin-left: 0%;
+  }
+}
+
+.navbar-logo-section {
+  width: 100%;
+  height: 64px;
+  background-color: $navbar-background-color;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+
+  @include media('>desktop') {
+    height: 70px;
+  }
+}
+
+.sidebar-and-theme-switches {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-bar-icon {
+  height: 38px;
+  width: 42px;
+  margin-left: 13px;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  background-color: #19868a;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+  @include media('>tablet') {
+    visibility: hidden;
+  }
+}
+
+.menu-bar-icon > div {
+  height: 4px;
+  width: 32px;
+  background-color: #f2f2f2;
+}
+
+.logo {
+  display: block;
+  padding: 7px 0px;
+  height: 50px;
+  width: 117px;
+  position: relative;
+  display: block;
+  top: auto;
+  left: auto;
+
+  @include media('>phone') {
+    padding: 4px 0px;
+    height: 54px;
+    width: 126px;
+  }
+}
+
+.language-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include media('<=phone') {
+    margin-left: 15px;
+  }
+  @include media('>phone', '<=tablet') {
+    margin-left: 18px;
+  }
+  @include media('>tablet') {
+    margin-right: 1px;
+  }
+  @include media('>laptop') {
+    margin-right: 9px;
+  }
+  @include media('>desktop') {
+    margin-right: 8px;
+  }
+}
+
+.language-button {
+  height: 100%;
+  width: 40px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: 7px;
+
+  @include media('>phone') {
+    width: 40px;
+    margin-right: 10px;
+  }
+  @include media('>tablet') {
+    width: 44px;
+    margin-right: 13px;
+  }
+  @include media('>laptop') {
+    margin-right: 10px;
+  }
+}
+
+.language-flag {
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.navbar-buttons {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: stretch;
+
+  @include media('>desktop') {
+    height: 66px;
+  }
+}
+
+.navbar-button {
+  line-height: 100%;
+  height: 100%;
+  width: 33.33%;
+  background-color: $navbar-button-default-color;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1.6px 0px 0px rgba(0, 0, 0, 0.15);
+}
+
+.navbar-button-text {
+  display: block;
+  margin: 0.5em;
+}

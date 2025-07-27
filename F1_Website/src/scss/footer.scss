@@ -1,0 +1,79 @@
+@import './variables/colors';
+
+.footer {
+  text-align: center;
+  height: 6.2em;
+  width: 100%;
+  bottom: 0;
+  background-color: $footer-background-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.footer-icons-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icons {
+  width: 180px;
+  display: flex;
+  justify-content: space-evenly;
+
+  @include media('>tablet') {
+    justify-content: space-around;
+  }
+  @include media('>desktop') {
+    justify-content: space-between;
+  }
+}
+
+.footer-icon {
+  height: 32px;
+  width: 32px;
+
+  @include media('>phone') {
+    height: 34px;
+    width: 34px;
+  }
+  @include media('>tablet') {
+    height: 38px;
+    width: 38px;
+  }
+  @include media('>laptop') {
+    height: 42px;
+    width: 42px;
+  }
+  @include media('>desktop') {
+    height: 46px;
+    width: 46px;
+  }
+}
+
+.footer-author {
+  padding-top: 8px;
+  margin-top: 8px;
+  border-top: 1px solid black;
+  padding-right: 2px;
+  padding-left: 2px;
+
+  @include media('>phone') {
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+  @include media('>tablet') {
+    padding-top: 12px;
+    margin-top: 12px;
+  }
+  @include media('>laptop') {
+    padding-top: 14px;
+    margin-top: 14px;
+  }
+  @include media('>desktop') {
+    padding-top: 16px;
+    margin-top: 16px;
+  }
+}
